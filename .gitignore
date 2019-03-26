@@ -1,6 +1,6 @@
-
-sfmback/node_modules
-sfmback/build
-sfmback/npm-debug.log
-sfmback/.env
-sfmback/.DS_Store
+#ignoring node_modules
+/sfmback/node_modules
+/sfmback/build
+/sfmback/npm-debug.log
+/sfmback/.env
+/sfmback/.DS_Store
