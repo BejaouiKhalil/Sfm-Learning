@@ -11,11 +11,9 @@ const ClassSchema = mongoose.Schema({
     ,
     createdAt:{
         type:Date,
-        required: true
     },
     lastupdate:{
         type:Date,
-        require:true
     }
     //subscribers+courses
 })

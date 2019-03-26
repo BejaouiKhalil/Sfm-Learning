@@ -1,16 +1,14 @@
-const classe = require('../../../models/Class.js');
-
+const classe = require('../../../models/Class');
 module.exports = {
     Query:{
-    classes: (_,$,{models}) => models.class.find(),
-    class: (_,{ id },{ models }) => models.class.findById(id)
+    classes: () => classe.find(),
+    class: (_,{id}) => classe.findById(id)
 },
-    mutation:{
-        addclasse(_, { input }){
-            const classe = input;
-            classe.save((err,res)=>{
-                err ? console.log(err) : console.log('succes :'+res);
-            });
+    Mutation:{
+      
+        createClass:(_,{name})=>{
+            console.log("hi :"+ name);
+            return classe.create({name:name});
         }
     }
 };
