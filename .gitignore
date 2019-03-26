@@ -1,4 +1,4 @@
-#ignoring node_modules
+#ignoring node_modules and logs
 /sfmback/node_modules
 /sfmback/build
 /sfmback/npm-debug.log
