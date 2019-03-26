@@ -19,5 +19,5 @@ const ClassSchema = mongoose.Schema({
     }
     //subscribers+courses
 })
-const Class = mongoose.model('Class',ClassSchema);
-module.exports = Class;
+const Classe = mongoose.model('Classe',ClassSchema);
+module.exports = Classe;
