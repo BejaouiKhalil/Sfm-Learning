@@ -1,12 +1,11 @@
 const { makeExecutableSchema } = require('graphql-tools');
 const typeDefs = require('./types/index.js');
-
-const resolvers = require('./resolvers/classeResolvers');
-
+const resolvers = require('./resolvers/index');
 
 
 const schema = makeExecutableSchema ({
     typeDefs,
-    resolvers
+    resolvers,
+    
 })
 module.exports = schema;

@@ -4,3 +4,9 @@
 /sfmback/npm-debug.log
 /sfmback/.env
 /sfmback/.DS_Store
+#front
+/sfmFront/node_modules
+/sfmFront/build
+/sfmFront/npm-debug.log
+/sfmFront/.env
+/sfmFront/.DS_Store

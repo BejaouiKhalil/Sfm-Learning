@@ -1,11 +1,17 @@
 const mongoose = require('mongoose');
 
-const rateSchema = mongoose.Schema({
-        //user + course
+const Schema = mongoose.Schema;
+const rateSchema = Schema({
+        //user 
         vote:{
             type:Number,
             required:true
+        },
+        course:{
+            type:Schema.Types.ObjectId,
+            ref: 'Course'
         }
+
 });
-const rate = mongoose.model('rate',rateSchema);
+const rate = mongoose.model('Rate',rateSchema);
 module.exports =rate;

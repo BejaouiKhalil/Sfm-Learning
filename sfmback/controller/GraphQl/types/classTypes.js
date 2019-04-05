@@ -5,6 +5,7 @@ const classe =`
         description:String
         createdAt:String
         lastupdate:String
+        courses:[Course]
     }
 
     input InputClass{
@@ -13,11 +14,12 @@ const classe =`
     }
     type Query {
         classes: [class]
-        class(id:ID!): class
+        class(id:ID!): class   
     }
     type Mutation{
-        addclasse(input: InputClass!): class
-        createClass(name:String): class
+        createClass(input: InputClass!): class
+        updateClass(id: ID!, input: InputClass!): class
+        deleteClass(id: ID!): class
     }
     `;
 module.exports = classe;

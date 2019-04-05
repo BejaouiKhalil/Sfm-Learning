@@ -1,13 +1,12 @@
 const mongoose = require('mongoose');
-
-const CourseSchema = mongoose.Schema({
+const Schema = mongoose.Schema;
+const CourseSchema = Schema({
     name:{
         type: String,
         required : true
     },
     desciption:{
         type:String,
-        required : true
     },
     type:{
         type:String,
@@ -18,8 +17,17 @@ const CourseSchema = mongoose.Schema({
     },
     content:{
         type:Array
-    }
-    //rate + author
-})
+    },
+    classe:{
+        type:Schema.Types.ObjectId,
+        ref: 'Classe'
+    },
+    rates:[{
+        type:Schema.Types.ObjectId,
+        ref: 'Rate'
+    }]
+    //TODO: author
+});
+CourseSchema.set('toObject',{virtuals: true});
 const course = mongoose.model('Course',CourseSchema);
 module.exports = course;

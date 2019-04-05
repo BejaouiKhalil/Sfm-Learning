@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
-
-const ClassSchema = mongoose.Schema({
+const Schema = mongoose.Schema;
+const ClassSchema = Schema({
     name:{
         type: String,
         required : true
@@ -11,10 +11,16 @@ const ClassSchema = mongoose.Schema({
     ,
     createdAt:{
         type:Date,
+        default: Date.now
     },
     lastupdate:{
         type:Date,
-    }
+        default: Date.now
+    },
+    courses:[{
+        type:Schema.Types.ObjectId,
+        ref: 'Course'
+    }]  
     //subscribers+courses
 })
 const Classe = mongoose.model('Classe',ClassSchema);
